@@ -5,8 +5,8 @@ import {
   ShieldAlert,
 } from "lucide-react";
 
-import GlassCard from "../ui/GlassCard";
-import StatusBadge from "../ui/StatusBadge";
+import GlassCard from "../../ui/GlassCard";
+import StatusBadge from "../../ui/StatusBadge";
 
 function PredictionCard() {
   return (

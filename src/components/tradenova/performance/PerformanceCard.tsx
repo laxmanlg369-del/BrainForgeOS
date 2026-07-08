@@ -5,7 +5,7 @@ import {
   Percent,
 } from "lucide-react";
 
-import GlassCard from "../ui/GlassCard";
+import GlassCard from "../../ui/GlassCard";
 
 function PerformanceCard() {
   return (

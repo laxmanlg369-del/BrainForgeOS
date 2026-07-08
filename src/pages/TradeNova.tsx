@@ -1,12 +1,12 @@
-import MarketOverview from "../components/tradenova/MarketOverview";
-import PredictionCard from "../components/tradenova/PredictionCard";
-import SignalCard from "../components/tradenova/SignalCard";
-import PortfolioCard from "../components/tradenova/PortfolioCard";
-import ChartSection from "../components/tradenova/ChartSection";
-import Watchlist from "../components/tradenova/Watchlist";
-import MarketNews from "../components/tradenova/MarketNews";
-import PerformanceCard from "../components/tradenova/PerformanceCard";
-import TradeNovaHeader from "../components/tradenova/TradeNovaHeader";
+import MarketOverview from "../components/tradenova/overview/MarketOverview";
+import PredictionCard from "../components/tradenova/prediction/PredictionCard";
+import SignalCard from "../components/tradenova/signal/SignalCard";
+import PortfolioCard from "../components/tradenova/portfolio/PortfolioCard";
+import ChartSection from "../components/tradenova/chart/ChartSection";
+import Watchlist from "../components/tradenova/watchlist/Watchlist";
+import MarketNews from "../components/tradenova/news/MarketNews";
+import PerformanceCard from "../components/tradenova/performance/PerformanceCard";
+import TradeNovaHeader from "../components/tradenova/header/TradeNovaHeader";
 
 function TradeNova() {
   return (

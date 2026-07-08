@@ -1,6 +1,6 @@
 import { Newspaper, ArrowUpRight } from "lucide-react";
 
-import GlassCard from "../ui/GlassCard";
+import GlassCard from "../../ui/GlassCard";
 
 const news = [
   {
