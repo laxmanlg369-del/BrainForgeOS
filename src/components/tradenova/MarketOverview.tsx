@@ -1,31 +1,5 @@
 import { TrendingUp, TrendingDown } from "lucide-react";
-
-const marketData = [
-  {
-    name: "NIFTY 50",
-    value: "24,856.20",
-    change: "+152.40",
-    positive: true,
-  },
-  {
-    name: "BANK NIFTY",
-    value: "56,248.80",
-    change: "+315.90",
-    positive: true,
-  },
-  {
-    name: "SENSEX",
-    value: "81,742.10",
-    change: "+418.30",
-    positive: true,
-  },
-  {
-    name: "INDIA VIX",
-    value: "13.42",
-    change: "-0.58",
-    positive: false,
-  },
-];
+import { marketData } from "../../data/marketData";
 
 function MarketOverview() {
   return (
@@ -35,7 +9,7 @@ function MarketOverview() {
           Market Overview
         </h2>
 
-        <p className="text-sm text-slate-400 mt-1">
+        <p className="mt-1 text-sm text-slate-400">
           Live snapshot of major Indian market indices.
         </p>
       </div>
@@ -43,7 +17,7 @@ function MarketOverview() {
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         {marketData.map((item) => (
           <div
-            key={item.name}
+            key={item.symbol}
             className="
               rounded-2xl
               border
@@ -63,25 +37,32 @@ function MarketOverview() {
                 {item.name}
               </p>
 
-              {item.positive ? (
-                <TrendingUp className="text-green-400" size={20} />
+              {item.trend === "up" ? (
+                <TrendingUp
+                  size={20}
+                  className="text-green-400"
+                />
               ) : (
-                <TrendingDown className="text-red-400" size={20} />
+                <TrendingDown
+                  size={20}
+                  className="text-red-400"
+                />
               )}
             </div>
 
             <h3 className="mt-5 text-3xl font-bold text-white">
-              {item.value}
+              {item.price.toLocaleString()}
             </h3>
 
             <p
               className={`mt-2 text-sm font-semibold ${
-                item.positive
+                item.trend === "up"
                   ? "text-green-400"
                   : "text-red-400"
               }`}
             >
-              {item.change} Today
+              {item.change > 0 ? "+" : ""}
+              {item.change} ({item.changePercent}%)
             </p>
           </div>
         ))}
